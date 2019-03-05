@@ -43,11 +43,11 @@ def test_trap():
 def monsters():
     print("You enter a den of monsters")
         # I should work on it so it work us i intended
-    creatures = ['bear', 'wolf', 'mice', 'kangaroo', 'rat', 'ginat ant']
-    x = weight / 10
+    monsters = ['bear', 'wolf', 'mice', 'kangaroo', 'rat', 'ginat ant']
+    x = weight / 20
     x = int(x)
-# I should work on it so it work us i intended
-    for i in creatures:
+
+    for i in monsters:
         print(f"you killed an {i} with a rock")
 
     if int(len(monsters)) <= x:
@@ -56,7 +56,7 @@ def monsters():
     elif int(len(monsters)) >= x:
         dead("You didnt have enough stones. Its happy hours for monsters")
     else:
-        dead("Bazinga!!! Your dead")
+        dead("bazinga!!! Your dead")
 
 
 def goldroom():
