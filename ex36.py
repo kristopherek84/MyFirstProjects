@@ -53,17 +53,11 @@ def monsters():
         print(f"you killed an {i} with a rock")
         counter += 1
         if counter == x:
+            dead("You didnt have enough stones. Its happy hours for monsters")
             break
         else:
-            pass
-
-    if int(len(monsters)) <= x:
-        print("congatulations. you killed all the monsters with the stones")
-        goldroom()
-    elif int(len(monsters)) >= x:
-        dead("You didnt have enough stones. Its happy hours for monsters")
-    else:
-        dead("bazinga!!! Your dead")
+            print("congatulations. you killed all the monsters with the stones")
+            goldroom()
 
 
 def goldroom():
