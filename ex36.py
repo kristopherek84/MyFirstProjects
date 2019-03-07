@@ -47,16 +47,18 @@ def monsters():
 
     x = weight / 20
     x = int(x)
+    counter = 0
 
     for i in monsters:
         print(f"you killed an {i} with a rock")
-        if int(len(monsters)) >= x:
+        counter += 1
+        if counter == x:
             break
         else:
             pass
 
     if int(len(monsters)) <= x:
-        print("congatulations. you killed all the monsters, with stones you carried")
+        print("congatulations. you killed all the monsters with the stones")
         goldroom()
     elif int(len(monsters)) >= x:
         dead("You didnt have enough stones. Its happy hours for monsters")
