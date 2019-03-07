@@ -49,15 +49,17 @@ def monsters():
     x = int(x)
     counter = 0
 
-    for i in monsters:
-        print(f"you killed an {i} with a rock")
-        counter += 1
-        if counter == x:
-            dead("You didnt have enough stones. Its happy hours for monsters")
-            break
-        else:
-            print("congatulations. you killed all the monsters with the stones")
-            goldroom()
+    
+        
+    if len(monsters) > x:
+        for i in range(x):
+            print(f"you killed an {monsters[i]} with a rock")
+        dead("You didnt have enough stones. Its happy hours for monsters")
+    else:
+        for i in monsters:
+            print(f"you killed an {i} with a rock")
+        print("congatulations. you killed all the monsters with the stones")
+        goldroom()
 
 
 def goldroom():
