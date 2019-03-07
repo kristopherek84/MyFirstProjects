@@ -53,15 +53,38 @@ def monsters():
         print(f"you killed an {i} with a rock")
         counter += 1
         if counter == x:
-            dead("You didnt have enough stones. Its happy hours for monsters")
             break
         else:
-            print("congatulations. you killed all the monsters with the stones")
-            goldroom()
+            pass
+
+    if int(len(monsters)) <= x:
+        print("congatulations. you killed all the monsters with the stones")
+        goldroom()
+    elif int(len(monsters)) >= x:
+        dead("You didnt have enough stones. Its happy hours for monsters")
+    else:
+        dead("bazinga!!! Your dead")
 
 
 def goldroom():
-    print("You won")
+    print("""Your journey was long, you feel tired. In front of you are closed
+    door which lead to your final destination. But you start to ask yourself.
+    Could this really be that simple? If it really was then why no one else
+    get to this spot before me. You become suspicious. What do you do?
+    """)
+
+    choice = input(">")
+    if choice == "open":
+        print(" You open the door and see room filled with gold. You won")
+    elif choice == "run" or "walk away":
+        dead("""
+            After a while of thought you realize that you are happy whith the
+            wealth you have, and there is really no point of risking your life.
+            You turn arounr and exit the cave. When you exit the cave you are
+            jumped by a group of bandits. "Money or life says the leader".
+            """)
+    else:
+        dead("Huge piano falls on your head, you really should have moved")
     exit(0)
 
 def start():
