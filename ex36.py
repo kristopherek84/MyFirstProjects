@@ -44,11 +44,16 @@ def monsters():
     print("You enter a den of monsters")
         # I should work on it so it work us i intended
     monsters = ['bear', 'wolf', 'mice', 'kangaroo', 'rat', 'ginat ant']
+
     x = weight / 20
     x = int(x)
 
     for i in monsters:
         print(f"you killed an {i} with a rock")
+        if int(len(monsters)) >= x:
+            break
+        else:
+            pass
 
     if int(len(monsters)) <= x:
         print("congatulations. you killed all the monsters, with stones you carried")
