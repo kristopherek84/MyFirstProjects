@@ -52,19 +52,13 @@ def monsters():
     for i in monsters:
         print(f"you killed an {i} with a rock")
         counter += 1
-        if counter == x:
+        if counter == x and len(monsters) > x:
+            dead("You didnt have enough stones. Its happy hours for monsters")
             break
-        else:
-            pass
-
-    if int(len(monsters)) <= x:
+    else:
         print("congatulations. you killed all the monsters with the stones")
         goldroom()
-    elif int(len(monsters)) >= x:
-        dead("You didnt have enough stones. Its happy hours for monsters")
-    else:
-        dead("bazinga!!! Your dead")
-
+    
 
 def goldroom():
     print("""Your journey was long, you feel tired. In front of you are closed
@@ -74,6 +68,7 @@ def goldroom():
     """)
 
     choice = input(">")
+    choice.lower()
     if choice == "open":
         print(" You open the door and see room filled with gold. You won")
     elif choice == "run" or "walk away":
